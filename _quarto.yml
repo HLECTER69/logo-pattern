@@ -13,9 +13,9 @@ project:
 title: Logo Pattern
 author: "Daniel Vartanian"
 keyword: >
-  Pipelines, Data Munging, Data Science, Data Visualization, Graphic Design,
-  Design Automation, Programmatic Graphics, Logo,
-  Center for Metropolitan Studies, CEM, University of São Paulo, USP
+  Pipelines, Data Visualization, Graphic Design, Design Automation,
+  Programmatic Graphics, Logo, Center for Metropolitan Studies, CEM,
+  University of São Paulo, USP
 date: today
 date-format: long
 
