@@ -1,0 +1,340 @@
+```{r}
+#| label: setup
+#| include: false
+
+library(here)
+
+source(here("R", "_setup.R"))
+```
+
+<!-- badges: start -->
+[![Project Status: Inactive – The project has reached a stable, usable state but is no longer being actively developed; support/maintenance will be provided as time allows.](https://www.repostatus.org/badges/latest/inactive.svg)](https://www.repostatus.org/#inactive)
+[![License: GPLv3](https://img.shields.io/badge/license-GPLv3-bd0000.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/license-CC_BY--NC--SA_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+<!-- badges: end -->
+
+## Overview
+
+This repository provides a fully reproducible pipeline for generating the Center for Metropolitan Studies ([CEM](https://centrodametropole.fflch.usp.br/)) logo pattern, based on its 20-Year Commemorative Logo.
+
+::: {style="text-align: center; margin: 2em;"}
+![](images/logo-cem-20.png)
+:::
+
+## Set the Environment
+
+```{r}
+#| output: false
+
+library(brandr)
+library(checkmate)
+library(dplyr)
+library(ggplot2)
+library(grid)
+library(here)
+library(magick)
+library(magrittr)
+library(ragg)
+library(scales)
+library(svglite)
+```
+
+```{r}
+#| output: false
+#| code-fold: true
+
+rounded_square <- function(
+  x,
+  y,
+  side,
+  fill = "black",
+  radius = unit(0.1, "npc")
+) {
+  assert_number(x)
+  assert_number(y)
+  assert_number(side, lower = 0)
+  assert_string(fill)
+  assert_class(radius, "unit")
+
+  half <- side / 2
+  grob <- roundrectGrob(
+    x = unit(0.5, "npc"),
+    y = unit(0.5, "npc"),
+    width = unit(1, "npc"),
+    height = unit(1, "npc"),
+    r = radius,
+    gp = gpar(fill = fill, lwd = 0)
+  )
+
+  annotation_custom(
+    grob = grob,
+    xmin = x - half,
+    xmax = x + half,
+    ymin = y - half,
+    ymax = y + half
+  )
+}
+```
+
+```{r}
+#| output: false
+#| code-fold: true
+
+plot_logo_pattern <- function(
+  n = 100,
+  shape_1 = 2, # 2 # hist(rbeta(10000, 2, 50))
+  shape_2 = 50, # 2
+  min_size = 0.25,
+  max_size = 15,
+  step = 0.01,
+  margin = 1,
+  aspect_ratio = c(15, 10)
+) {
+  assert_count(n, positive = TRUE)
+  assert_number(shape_1, lower = 0)
+  assert_number(shape_2, lower = 0)
+  assert_number(max_size, lower = 1)
+  assert_number(min_size, lower = 0, upper = max_size)
+  assert_number(step, lower = 0.0001)
+  assert_number(margin, lower = 0, upper = min(aspect_ratio))
+  assert_numeric(aspect_ratio, len = 2, lower = 1)
+
+  data <- tibble(
+    x = sample(seq(margin, aspect_ratio[1] - margin, by = step), n, TRUE),
+    y = sample(seq(margin, aspect_ratio[2] - margin, by = step), n, TRUE),
+    size =
+      rbeta(n, shape_1, shape_2) |>
+      rescale(to = c(min_size, max_size), from = c(0, 1)),
+    fill = sample(
+      x = get_brand_color(c("primary", "secondary", "tertiary")),
+      size = n,
+      replace = TRUE
+    )
+  )
+
+  plot <-
+    ggplot() +
+    xlim(0, aspect_ratio[1]) +
+    ylim(0, aspect_ratio[2]) +
+    theme_void() +
+    coord_fixed()
+
+  for (i in split(data, seq_len(nrow(data)))) {
+    plot <-
+      plot +
+      rounded_square(
+        x = i$x,
+        y = i$y,
+        side = i$size,
+        fill = i$fill,
+        r = unit(0.1, "npc")
+      )
+  }
+
+  plot
+}
+```
+
+## Set Variables
+
+::: {.callout-note}
+Set the number of squares to be drawn.
+:::
+
+```{r}
+n <- 100
+```
+
+## Plot Patterns
+
+::: {.callout-note}
+Change the seed value to get different patterns.
+:::
+
+```{r}
+seeds <- c(1, 33, 9422)
+```
+
+```{r}
+#| label: pattern-plots
+#| code-fold: true
+
+for (i in seeds) {
+  set.seed(i)
+
+  i_plot <- plot_logo_pattern(n)
+
+  ggsave(
+    filename = here("patterns", paste0("logo-pattern-", i, ".svg")),
+    plot = i_plot,
+    width = 15,
+    height = 10,
+    units = "cm"
+  )
+
+  print(i_plot)
+}
+```
+
+```{r}
+#| eval: false
+#| include: false
+
+seeds <- sample(1:10000, 100)
+
+for (i in seeds) {
+  set.seed(i)
+
+  i_plot <- plot_logo_pattern(n)
+
+  ggsave(
+    filename = here("patterns", paste0("logo-pattern-", i, ".svg")),
+    plot = i_plot,
+    width = 15,
+    height = 10,
+    units = "cm"
+  )
+}
+```
+
+## Animate Pattern
+
+```{r}
+#| code-fold: true
+
+files <- character()
+
+for (i in seeds) {
+  set.seed(i)
+
+  i_plot <- plot_logo_pattern(n)
+  i_file <- tempfile(fileext = ".png")
+
+  ggsave(
+    filename = i_file,
+    plot = i_plot,
+    width = 15,
+    height = 10,
+    units = "cm",
+    dpi = 150,
+    bg = "white"
+  )
+
+  files <- files |> append(i_file)
+}
+```
+
+```{r}
+#| code-fold: true
+
+animation <-
+  files |>
+  lapply(image_read) |>
+  image_join() |>
+  image_animate(fps = 1)
+```
+
+```{r}
+#| code-fold: true
+
+animation |> image_write(here("images", "logo-pattern-animation.gif"))
+```
+
+```{r}
+#| label: patterns-animation
+#| code-fold: true
+
+animation
+```
+
+## License
+
+::: {style="text-align: left;"}
+[![License: GPLv3](https://img.shields.io/badge/license-GPLv3-bd0000.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/license-CC_BY--NC--SA_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+:::
+
+The code in this report is licensed under the [GNU General Public License Version 3](https://www.gnu.org/licenses/gpl-3.0), while the report is available under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+
+``` text
+Copyright (C) 2025 Daniel Vartanian
+
+The code in this report is free software: you can redistribute it and/or
+modify it under the terms of the GNU General Public License as published by the
+Free Software Foundation, either version 3 of the License, or (at your option)
+any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY
+WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with
+this program. If not, see <https://www.gnu.org/licenses/>.
+```
+
+## Acknowledgments
+
+```{r, results='asis'}
+#| echo: false
+
+library(htmltools)
+
+blocks <- list(
+  list(
+    logo_link = "https://centrodametropole.fflch.usp.br",
+    logo_src = "images/cem-icon.svg",
+    logo_alt = "CEM Logo",
+    logo_width = 190,
+    text = 'This work was developed with support from the Center for Metropolitan Studies (<a href="https://centrodametropole.fflch.usp.br">CEM</a>) based at the School of Philosophy, Letters and Human Sciences (<a href="https://www.fflch.usp.br/">FFLCH</a>) of the University of São Paulo (<a href="https://usp.br">USP</a>) and at the Brazilian Center for Analysis and Planning (<a href="https://cebrap.org.br/">CEBRAP</a>).'
+  ),
+  list(
+    logo_link = "https://fapesp.br/",
+    logo_src = "images/fapesp-logo.svg",
+    logo_alt = "FAPESP Logo",
+    logo_width = 160,
+    text = 'This study was financed, in part, by the São Paulo Research Foundation (<a href="https://fapesp.br/">FAPESP</a>), Brazil. Process Number <a href="https://bv.fapesp.br/en/bolsas/231507/geospatial-data-science-applied-to-food-policies/">2025/17879-2</a>.'
+  )
+)
+
+blocks |>
+  lapply(
+    function(x) {
+      div(
+        style = paste0(
+          "display: flex; ",
+          "align-items: flex-start; ",
+          "margin-bottom: 2em;"
+        ),
+        div(
+          style = paste0(
+            "flex: 0 0 30%; ",
+            "display: flex; ",
+            "justify-content: center; ",
+            "margin: auto 0;"
+          ),
+          tags$a(
+            href = x$logo_link,
+            tags$img(
+              src = x$logo_src,
+              alt = x$logo_alt,
+              style = paste0(
+                "max-width: ", x$logo_width, "px; ",
+                "width: 100%; ",
+                "height: auto;"
+              )
+            )
+          )
+        ),
+        div(
+          style = paste0(
+            "flex: 1; ",
+            "padding-left: 1em;"
+          ),
+          HTML(x$text)
+        )
+      )
+    }
+  ) |>
+  tagList() |>
+  browsable()
+```
