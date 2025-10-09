@@ -83,7 +83,7 @@ typography:
     weight: 800
   monospace: Roboto Mono
   monospace-inline:
-    color: comp-blue-1
+    color: black
     background-color: gray-l95
   monospace-block:
     background-color: gray-l95
